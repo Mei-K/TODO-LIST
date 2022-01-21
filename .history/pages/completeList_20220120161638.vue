@@ -1,0 +1,213 @@
+<template>
+  <div class="main">
+    <!-- TODOリスト表示部分 -->
+    <div class="main-container">
+      <!-- コルクボード -->
+      <div class="cork-board">
+        <!-- ページ上部 nav -->
+        <div class="top-container">
+          <ul class="btn-container"></ul>
+        </div>
+        <v-container class="div-card">
+          <div class="todo-card-container">
+            <v-card
+              class="mx-auto"
+              v-for="(todo, i) of getTodoList"
+              v-bind:key="todo.i"
+            >
+              <div class="close-btn">
+                <v-btn icon v-on:click="deleteCplTodo(i)">
+                  <i class="fas fa-times"></i>
+                </v-btn>
+              </div>
+              <div>
+                <v-card-title> {{ todo.name }} </v-card-title>
+                <v-card-subtitle
+                  >TIME LIMIT
+                  <strong> {{ todo.date }} </strong>
+                </v-card-subtitle>
+              </div>
+              <v-card-actions>
+                <v-btn
+                  elevation="2"
+                  color="error"
+                  v-on:click="returnTodoList(i)"
+                  >RETURN</v-btn
+                >
+                <v-btn icon @click="show = !show">
+                  <v-icon>{{
+                    show ? 'mdi-chevron-up' : 'mdi-chevron-down'
+                  }}</v-icon>
+                </v-btn>
+              </v-card-actions>
+
+              <v-expand-transition>
+                <div v-show="show">
+                  <v-divider></v-divider>
+
+                  <v-card-text>
+                    {{ todo.memo }}
+                  </v-card-text>
+                </div>
+              </v-expand-transition>
+            </v-card>
+          </div>
+        </v-container>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+
+//TODOオブジェクト
+type Todo = {
+  name: string
+  memo: string
+  date: string
+}
+export default Vue.extend({
+  data() {
+    return {
+      //モーダルの設定
+      modal: false,
+      show: false,
+
+      //TODOのname
+      todoTitle: '',
+      //TODOのmemo
+      todoMemo: '',
+      //TODOのdate
+      todoDate: '',
+    }
+  },
+
+  methods: {
+    /**
+     * 完了TODOリストから削除する.
+     * @param i - 削除するTODOのindex
+     */
+    deleteCplTodo(i: number) {
+      this.$store.commit('todo/deleteCplList', i)
+    },
+    returnTodoList(i: number) {
+      this.$store.commit('todo/returnTodoList', i)
+    },
+  },
+  computed: {
+    /**
+     * 完了TODOリストを取得する.
+     */
+    getTodoList() {
+      return this.$store.state.todo.cplList
+    },
+  },
+})
+</script>
+
+<style scoped lang="scss">
+//コルクボード
+.cork-board {
+  width: 90%;
+  min-height: 80vh;
+  border: 20px solid #8d6745;
+  background: url('/corkboard.png') repeat;
+  margin: 2.5rem auto;
+}
+
+//リボン タイトル
+.ribbon {
+  width: 35%;
+  margin: 1rem auto 0;
+  position: relative;
+  background-color: rgba(203, 64, 66, 1);
+  color: #fff;
+  line-height: 4rem;
+  text-align: center;
+}
+.ribbon:after,
+.ribbon:before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  border-top: 2rem solid rgba(203, 64, 66, 1);
+  border-bottom: 2rem solid rgba(203, 64, 66, 1);
+  border-right: 2rem solid transparent;
+  border-left: 2rem solid transparent;
+}
+.ribbon:after {
+  left: -2rem;
+}
+.ribbon:before {
+  right: -2rem;
+}
+
+//ページ上部 ボタンのあるcontainer
+// .top-container {
+//   width: 85%;
+//   margin: 0 auto;
+//   display: flex;
+//   justify-content: flex-end;
+//   padding: 1rem;
+//   align-items: center;
+//   text-align: center;
+
+//   .v-btn {
+//     min-width: 0;
+//     width: 2.5rem;
+//     height: 2.5rem;
+//     padding: 0;
+//     border-radius: 50%;
+//     font-size: 1.4rem;
+//   }
+// }
+
+//TODOカードのあるcontainer
+// .todo-card-container {
+//   width: 85%;
+//   margin: 0 auto;
+//   display: flex;
+//   flex-wrap: wrap;
+//   text-align: center;
+//   margin-top: 2.5rem;
+//   .v-card {
+//     width: 30%;
+//     margin-bottom: 2rem;
+
+//     @include md {
+//       width: 48%;
+//     }
+
+//     .close-btn {
+//       display: flex;
+//     }
+//     .v-card__title {
+//       display: block;
+//       padding: 0.5rem 0 0 0;
+//       font-weight: 800;
+//       font-size: 2rem;
+//       @include md {
+//         font-size: size 1.5rem;
+//         font-weight: 600;
+//       }
+//     }
+//     .v-card__subtitle {
+//       padding-top: 1.5rem;
+//       font-size: 1rem;
+//       font-weight: 400;
+//       color: red;
+//       @include md {
+//         font-size: size 0.8rem;
+//       }
+//       &strong {
+//         font-weight: 600;
+//         @include md {
+//           font-size: size 0.8rem;
+//         }
+//       }
+//     }
+//   }
+// }
+</style>

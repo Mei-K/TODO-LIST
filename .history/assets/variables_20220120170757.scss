@@ -1,0 +1,42 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+
+.v-tabs {
+  flex: 0;
+}
+
+//色：変数
+$pink: rgba(203, 64, 66, 0.9);
+$pink-clear: rgba(203, 64, 66, 0.5);
+$yellow: rgba(245, 216, 0, 1);
+$yellow-clear: rgba(245, 216, 0, 0.8);
+
+$white: #f8fbf8;
+$brown: #332722;
+$brown-clear: rgba(51, 39, 34, 0.7);
+
+//画面幅
+
+$sm: 640px; // スマホ
+$md: 768px; // タブレット
+$lg: 1024px; // PC
+
+//@include sm{  }でメディアクエリ対応になる
+
+@mixin sm {
+  @media (max-width: ($sm)) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: ($md)) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: ($lg)) {
+    @content;
+  }
+}

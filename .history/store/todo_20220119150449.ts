@@ -1,0 +1,3 @@
+//state
+
+export const state = () => ({})
