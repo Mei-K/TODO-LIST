@@ -238,7 +238,9 @@ export default Vue.extend({
     @include sm {
       width: 2.4rem;
       height: 2.4rem;
-      font-size: 1.35rem;
+      font-size: 1.3rem;
+      align-items: center;
+      text-align: center;
     }
   }
   .btn-container {

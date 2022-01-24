@@ -362,15 +362,15 @@ export default Vue.extend({
 
 //リボン タイトル
 .ribbon {
-  width: 40%;
+  width: 35%;
   margin: 1rem auto 0;
   position: relative;
   background-color: rgba(203, 64, 66, 1);
   color: #fff;
   line-height: 4rem;
   text-align: center;
-  @include md {
-    width: 45%;
+  @include md{
+    width45%;
   }
   @include sm {
     width: 45%;
@@ -438,9 +438,9 @@ export default Vue.extend({
     font-size: 1.8rem;
 
     @include sm {
-      width: 2.4rem;
-      height: 2.4rem;
-      font-size: 1.35rem;
+      width: 1.8rem;
+      height: 1.8rem;
+      font-size: 1rem;
     }
   }
   .btn-container {
