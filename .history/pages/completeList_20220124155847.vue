@@ -158,7 +158,7 @@ export default Vue.extend({
   width: 35%;
   margin: 1rem auto 0;
   position: relative;
-  background-color: $kiiro;
+  background-color: $yellow;
   color: #fff;
   line-height: 4rem;
   text-align: center;
@@ -183,14 +183,14 @@ export default Vue.extend({
   content: '';
   position: absolute;
   top: 0;
-  border-top: 2rem solid $kiiro;
-  border-bottom: 2rem solid $kiiro;
+  border-top: 2rem solid $yellow;
+  border-bottom: 2rem solid $yellow;
   border-right: 2rem solid transparent;
   border-left: 2rem solid transparent;
 
   @include sm {
-    border-top: 1rem solid $kiiro;
-    border-bottom: 1rem solid $kiiro;
+    border-top: 1rem solid $yellow;
+    border-bottom: 1rem solid $yellow;
     border-right: 1rem solid transparent;
     border-left: 1rem solid transparent;
   }
@@ -222,7 +222,7 @@ export default Vue.extend({
   }
   .nav-btn {
     color: $brown;
-    background-color: $shiro;
+    background-color: $white;
   }
   .v-btn {
     min-width: 0;
@@ -290,7 +290,7 @@ export default Vue.extend({
       border-right: 2px dotted rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       padding: 0.25em 2em;
-      background-color: $shiro;
+      background-color: white;
       transform: rotate(-4deg);
 
       @include sm {
@@ -374,7 +374,7 @@ export default Vue.extend({
         }
       }
       .return-btn {
-        color: $shiro;
+        color: $white;
         background-color: $momo;
         @include sm {
           padding: 0.1rem;

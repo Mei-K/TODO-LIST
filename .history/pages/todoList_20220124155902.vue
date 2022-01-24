@@ -422,7 +422,7 @@ export default Vue.extend({
   }
   .nav-btn {
     color: $brown;
-    background-color: $shiro;
+    background-color: $white;
   }
   .v-btn {
     min-width: 0;
@@ -499,7 +499,7 @@ export default Vue.extend({
       border-right: 2px dotted rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       padding: 0.25em 2em;
-      background-color: $shiro;
+      background-color: white;
       transform: rotate(-4deg);
 
       @include sm {
@@ -584,8 +584,8 @@ export default Vue.extend({
         }
       }
       .cpl-btn {
-        color: $shiro;
-        background-color: $kiiro;
+        color: $white;
+        background-color: $yellow;
 
         @include sm {
           padding: 0.1rem;

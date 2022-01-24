@@ -584,8 +584,8 @@ export default Vue.extend({
         }
       }
       .cpl-btn {
-        color: $shiro;
-        background-color: $kiiro;
+        color: $white;
+        background-color: $yellow;
 
         @include sm {
           padding: 0.1rem;
