@@ -9,9 +9,9 @@
         <div class="top-container">
           <ul class="btn-container">
             <li>
-              <v-btn to="/todoList" class="nav-btn"
+              <v-btn to="/todoList" class="nav-btn balloonoya"
                 ><i class="fas fa-list-ul"></i>
-                <span class="balloon-text">TODO<br />LIST</span>
+                <span class="balloon">TODO<br />LIST</span>
               </v-btn>
             </li>
           </ul>

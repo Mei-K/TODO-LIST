@@ -9,9 +9,9 @@
         <div class="top-container">
           <ul class="btn-container">
             <li>
-              <v-btn to="/todoList" class="nav-btn"
+              <v-btn to="/todoList" class="nav-btn balloonoya"
                 ><i class="fas fa-list-ul"></i>
-                <span class="balloon-text">TODO<br />LIST</span>
+                <span class="balloon">TODO<br />LIST</span>
               </v-btn>
             </li>
           </ul>
@@ -227,12 +227,12 @@ export default Vue.extend({
   .nav-btn {
     color: $chairo;
     background-color: $shiro;
-    //ボタンhoverで文字が下に出る
+    //ボタンhover
     position: relative;
-    :hover .balloon-text {
+    :hover .balloon {
       display: inline; /* インライン要素として表示 */
     }
-    .balloon-text {
+    .balloon {
       position: absolute; /* 親要素を基準 */
       display: none; /* 要素を非表示 */
       padding: 0.2rem; /* テキストの前後の余白 */
