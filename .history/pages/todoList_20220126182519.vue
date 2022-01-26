@@ -449,11 +449,11 @@ export default Vue.extend({
       line-height: 1;
       align-items: center;
       text-align: center;
-      letter-spacing: 0.1;
     }
     .cpl-nav-btn {
       width: 5.5rem;
       font-size: 0.7rem;
+      letter-spacing: 0.1;
     }
   }
   .v-btn {
