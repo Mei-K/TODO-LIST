@@ -16,11 +16,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'apple-touch-icon',
-        type: 'image/png',
-        href: '/apple-touch-icon.png',
-      },
       // { rel: 'icon', type: 'image/x-icon', href: '/icon.png' },
       //vuetify fontAwesome icon CDN
       {
