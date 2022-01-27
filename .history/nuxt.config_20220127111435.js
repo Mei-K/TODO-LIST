@@ -6,7 +6,7 @@ export default {
     titleTemplate: '%s - todo-app-nuxt',
     title: 'TODO APP',
     htmlAttrs: {
-      lang: 'ja',
+      lang: 'js',
     },
     meta: [
       { charset: 'utf-8' },
