@@ -1,6 +1,8 @@
 <template>
-  <div class="top-img">
-    <img src="/sea.jpg" alt="" />
+  <div class="container">
+    <div class="top-img">
+      <img src="/sea.jpg" alt="" />
+    </div>
   </div>
 </template>
 

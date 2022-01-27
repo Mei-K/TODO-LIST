@@ -1,17 +1,17 @@
 <template>
-  <div class="top-img">
+  <div class="top">
     <img src="/sea.jpg" alt="" />
   </div>
 </template>
 
 <style scoped lang="scss">
-.top-img {
+.top {
   width: 100%;
-  height: 94.5vh;
+  height: 98vh;
 
   img {
     width: 100%;
-    height: 94.5vh;
+    height: 98vh;
   }
 }
 </style>
