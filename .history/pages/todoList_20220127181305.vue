@@ -430,8 +430,7 @@ export default Vue.extend({
   .nav-btn {
     color: $chairo;
     background-color: $shiro;
-
-    //PC画面の時だけマウスhoverで文字が出る
+    //マウスhoverで文字が出る
     @include lg {
       position: relative;
       :hover .balloon-text {
